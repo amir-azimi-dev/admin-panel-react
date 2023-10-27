@@ -1,0 +1,58 @@
+.topbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 15px -10px rgba(0, 0, 0, 0.7);
+    z-index: 999;
+
+    .logo {
+        font-size: 2rem;
+        cursor: pointer;
+
+        a {
+            color: #09139a;
+        }
+    }
+
+    .right-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1.3rem;
+
+        .icon-container {
+            color: #555;
+            position: relative;
+            cursor: pointer;
+
+            .badge {
+                position: absolute;
+                top: -0.3rem;
+                right: -0.3rem;
+                background-color: red;
+                color: #fff;
+                font-size: 0.75rem;
+                padding: 0.2rem;
+                border-radius: 50%;
+            }
+        }
+
+        .profile-container {
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 3rem;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    }
+}

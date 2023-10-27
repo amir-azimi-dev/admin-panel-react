@@ -1,0 +1,18 @@
+.product {
+    width: 100%;
+    
+    .product__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem;
+
+        .product__title {
+            font-size: 2rem;
+        }
+
+        .product__button {
+            text-transform: none;
+        }
+    }
+}
