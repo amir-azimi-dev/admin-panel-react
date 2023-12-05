@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import "./Sidebar.scss"
 
 // icons
@@ -22,24 +22,24 @@ export default function Sidebar() {
             <div className="sidebar__menu-item">
                 <h3 className="sidebar__title">Dashboard</h3>
                 <ul className='sidebar__menu'>
-                    <Link to="/">
-                        <li className='sidebar__item sidebar__item--active'>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <LineStyle className='sidebar__icon' />
                             <span>Home</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/analytics" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <TimeLine className='sidebar__icon' />
                             <span>Analytics</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/sales" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <TrendingUp className='sidebar__icon' />
                             <span>Sales</span>
                         </li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
 
@@ -47,84 +47,84 @@ export default function Sidebar() {
             <div className="sidebar__menu-item">
                 <h3 className="sidebar__title">Quick Menu</h3>
                 <ul className='sidebar__menu'>
-                    <Link to="/users">
-                        <li className='sidebar__item'>
+                    <NavLink to="/users" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <PermIdentity className='sidebar__icon' />
                             <span>Users</span>
                         </li>
-                    </Link>
-                    <Link to="/new-users">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/new-users" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <PermIdentity className='sidebar__icon' />
                             <span>New Users</span>
                         </li>
-                    </Link>
-                    <Link to="/products">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/products" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <Storefront className='sidebar__icon' />
                             <span>Products</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/transactions" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <AttachMoney className='sidebar__icon' />
                             <span>Transactions</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/reports" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <BarChart className='sidebar__icon' />
                             <span>Reports</span>
                         </li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
 
             <div className="sidebar__menu-item">
                 <h3 className="sidebar__title">Notifications</h3>
                 <ul className='sidebar__menu'>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    <NavLink to="/mails" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <MailOutline className='sidebar__icon' />
-                            <span>Mail</span>
+                            <span>Mails</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/feedback" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <DynamicFeed className='sidebar__icon' />
                             <span>Feedback</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/message" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <ChatBubbleOutline className='sidebar__icon' />
                             <span>Message</span>
                         </li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
 
             <div className="sidebar__menu-item">
                 <h3 className="sidebar__title">Staff</h3>
                 <ul className='sidebar__menu'>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    <NavLink to="/manage" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <WorkOutline className='sidebar__icon' />
                             <span>Manage</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/analytics" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <TimeLine className='sidebar__icon' />
                             <span>Analytics</span>
                         </li>
-                    </Link>
-                    <Link to="/">
-                        <li className='sidebar__item'>
+                    </NavLink>
+                    <NavLink to="/reports" className={({ isActive }) => isActive ? "sidebar__item sidebar__item--active" : "sidebar__item"}>
+                        <li>
                             <Report className='sidebar__icon' />
                             <span>Reports</span>
                         </li>
-                    </Link>
+                    </NavLink>
                 </ul>
             </div>
         </div>
